@@ -1,3 +1,5 @@
-require './app/app.rb'
+#!/usr/bin/env rackup
 
-run Zbdcg.new
+require File.expand_path("../config/boot.rb", __FILE__)
+
+run Zbdcg.instance
