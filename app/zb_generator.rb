@@ -33,18 +33,18 @@ class ZbGenerator
 
           text: text,
 
-          fields: [
-            {
-              title: "Positive",
-              value: '%.4f' % sentiment.first,
-              short: true
-            },
-            {
-              title: "Negative",
-              value: '%.4f' % sentiment.last,
-              short: true
-            },
-          ]
+          # fields: [
+          #   {
+          #     title: "Positive",
+          #     value: '%.4f' % sentiment.first,
+          #     short: true
+          #   },
+          #   {
+          #     title: "Negative",
+          #     value: '%.4f' % sentiment.last,
+          #     short: true
+          #   },
+          # ]
         }
       ]
     }
