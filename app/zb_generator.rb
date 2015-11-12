@@ -52,7 +52,7 @@ class ZbGenerator
   end
 
   def generate_display_name
-    Digest::MD5.base64digest("#{user_id}#{Date.today.to_s}")
+    Digest::MD5.base64digest("#{user_id}#{Date.today.to_s}")[0..3]
   end
 
   def get_sentiment
