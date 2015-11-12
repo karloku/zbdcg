@@ -13,9 +13,9 @@ class ZbGenerator
 
     color = 
       case sentiment.first
-      when sentiment.first >= 0.6
+      when 0.6..1.0
         "good"
-      when sentiment.first >= 0.4
+      when 0.4..0.6
         "warning"
       else
         "danger"
