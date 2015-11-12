@@ -1,3 +1,3 @@
-require './app.rb'
+require './app/app.rb'
 
-run SlashSlack.new
+run Zbdcg.new

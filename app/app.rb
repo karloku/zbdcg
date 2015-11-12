@@ -6,7 +6,7 @@ require 'digest'
 require 'net/http'
 require 'rest-client'
 
-class SlashSlack
+class Zbdcg
   def call(env)
     input = env['rack.input'].read
     params = Hash[input.each_line.flat_map { |l| URI.decode_www_form(l.strip) }]
