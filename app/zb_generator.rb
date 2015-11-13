@@ -11,15 +11,7 @@ class ZbGenerator
     display_name = generate_display_name
     sentiment = get_sentiment
 
-    color = 
-      case sentiment.first
-      when 0.7..1.0
-        "good"
-      when 0.3..0.7
-        "warning"
-      else
-        "danger"
-      end
+    color = get_color(sentiment)
 
     response = {
       response_type: 'in_channel',
@@ -58,4 +50,18 @@ class ZbGenerator
   def get_sentiment
     text.c_sentiment.first
   end
+
+  def get_color(sentiment)
+    r, g = 255, 255
+
+    case sentiment.first 
+    when 0..0.5
+      g -= sentiment.first * 255
+    else
+      r -= sentiment.last * 255
+    end
+
+    "##{ '%02x' % r }#{ '%02x' % g }00".upcase
+  end
+
 end
