@@ -17,7 +17,7 @@ class ZbGenerator
       response_type: 'in_channel',
       attachments: [
         {
-          fallback: "#{display_name} says:\ntext",
+          fallback: "看看谁在装逼",
 
           color: color,
 
